@@ -4,5 +4,5 @@
   #become: yes
   tasks:
   - name: "Building docker image"
-    command: docker build -t assignment --build-arg abc={{input}} .
+    command: docker build -t assignment -f /var/lib/jenkins/workspace/Dockerfile --build-arg abc={{input}} .
     command: docker run assignment printenv
