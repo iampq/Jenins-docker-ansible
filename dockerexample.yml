@@ -1,0 +1,8 @@
+---
+- name: Run a docker image
+  hosts: localhost
+  #become: yes
+  tasks:
+  - name: "Building docker image"
+    command: docker build -t assignment --build-arg abc={{input}} .
+    command: docker run assignment printenv
