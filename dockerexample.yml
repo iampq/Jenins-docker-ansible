@@ -5,4 +5,5 @@
   tasks:
   - name: "Building docker image"
     command: docker build -t assignment -f /var/lib/jenkins/workspace/Dockerfile --build-arg abc={{input}} .
+  - name: "printing env vars"
     command: docker run assignment printenv
